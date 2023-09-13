@@ -27,6 +27,12 @@ To explore the database:
 $ sqlite3 databases/hapi-test.sql
 ```
 
+It is also possible to make an empty database for testing:
+
+```
+$ make empty
+```
+
 ## Design notes
 
 There is a denormalised view in ``sql/views`` corresponding to every

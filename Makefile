@@ -27,6 +27,7 @@ TEST_DATA=${CORE_DATA} ${OP_DATA} ${POP_DATA}
 
 all: test-database-recreate
 
+
 test-database-create: ${TEST_DATABASE}
 
 test-database-delete:
@@ -39,3 +40,10 @@ ${TEST_DATABASE}: ${DATABASE_DIR} ${CORE_SCHEMA}
 
 ${DATABASE_DIR}:
 	mkdir -p ${DATABASE_DIR}
+
+# Option to make empty DB
+
+test-database-empty: ${DATABASE_DIR} ${CORE_SCHEMA}
+	cat ${TEST_SCHEMAS} ${TEST_VIEWS} ${TEST_DATA} | ${SQLITE_CMD} ${TEST_DATABASE}
+
+empty: test-database-delete test-database-empty
