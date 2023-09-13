@@ -44,6 +44,6 @@ ${DATABASE_DIR}:
 # Option to make empty DB
 
 test-database-empty: ${DATABASE_DIR} ${CORE_SCHEMA}
-	cat ${TEST_SCHEMAS} ${TEST_VIEWS} ${TEST_DATA} | ${SQLITE_CMD} ${TEST_DATABASE}
+	cat ${TEST_SCHEMAS} ${TEST_VIEWS} | ${SQLITE_CMD} ${TEST_DATABASE}
 
 empty: test-database-delete test-database-empty
