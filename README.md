@@ -1,5 +1,5 @@
-HAPI database schemas
-=====================
+DEPRECATED - HAPI database schemas
+==================================
 
 SQL schemas for the Humanitarian API (HAPI) from the [Centre for
 Humanitarian Data](https://centre.humdata.org).
